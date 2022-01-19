@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about',[
+        "nama" => "Ardia Alif Ramadhan",
+        "email" => "3103120029@student.smktelkom-pwt.sch.id",
+        "gambar" => "FotoArdi.jpg"
+    ]);
 });
 
 Route::get('/gallery', function () {
