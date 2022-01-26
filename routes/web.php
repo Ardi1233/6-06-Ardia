@@ -14,17 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
+});
+
+Route::get('/', function () {
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/about', function () {
-    return view('about',[
+    return view('about' , [
+        "title" => "About",
         "nama" => "Ardia Alif Ramadhan",
-        "email" => "3103120029@student.smktelkom-pwt.sch.id",
+        "email" => "3103120029@gmail.com",
         "gambar" => "FotoArdi.jpg"
     ]);
 });
 
 Route::get('/gallery', function () {
-        return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
