@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContractController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,10 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return view('about' , [
-        "title" => "About",
-        "nama" => "Ardia Alif Ramadhan",
-        "email" => "3103120029@gmail.com",
-        "gambar" => "FotoArdi.jpg"
+     "title" => "About",
+     "nama" => "Ardia Alif Ramadhan",
+     "email" => "3103120029@gmail.com",
+     "gambar" => "FotoArdi.jpg"
     ]);
 });
 
@@ -37,3 +38,4 @@ Route::get('/gallery', function () {
         "title" => "Gallery"
     ]);
 });
+Route::resource('/contacts', ContractController::class);
